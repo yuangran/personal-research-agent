@@ -15,11 +15,30 @@
 
 ## 当前阶段
 
-`M1：最小模型应用（准备进入）`
+`M1：最小模型应用（进行中）`
 
-M0 已完成，项目定义、学习文档、Git 工作流以及 GitHub / Gitee 远端基线已经建立。现在还没有应用代码；下一步会先检查 Python 开发环境并建立最小项目，再学习一次请求从输入到模型响应经历的过程。
+M0 已完成，项目定义、学习文档、Git 工作流以及 GitHub / Gitee 远端基线已经建立。M1 的第一个最小任务已经建立 Python 3.13、uv、项目虚拟环境、依赖锁定、最小程序和 pytest 测试；下一步将选择官方模型 SDK 和模型，学习一次请求从输入到模型响应经历的过程。
 
 最新进度、验证证据和下一步任务见 [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md)。
+
+## 当前最小运行方式
+
+当前程序还没有调用模型，也不需要 API Key。安装 [uv](https://docs.astral.sh/uv/) 后，在仓库根目录执行：
+
+```bash
+uv python install 3.13
+uv sync --locked
+uv run python main.py
+uv run python -m pytest -q
+```
+
+预期程序输出：
+
+```text
+Hello from personal-research-agent
+```
+
+预期测试结果为 `1 passed`。`.venv` 是可重建的本机环境，不应提交到 Git；项目解释器和依赖要求由 `.python-version`、`pyproject.toml` 与 `uv.lock` 共同记录。
 
 ## 项目目标
 
