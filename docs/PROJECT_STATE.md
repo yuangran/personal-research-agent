@@ -3,7 +3,7 @@
 ## 状态元数据
 
 - 最后验证日期：2026-07-31
-- 最近已验证基线提交：`3204e67`
+- M1 起始基线提交：`3204e67`
 
 ## 当前里程碑
 
@@ -63,6 +63,7 @@
 - 重建检查：删除 `.venv` 后执行 `uv sync --locked`，再次通过运行和测试
 - 基线提交：`33ad431`、`c8b4507`、`519a148`、`3204e67`
 - M0 PR：[GitHub PR #1](https://github.com/yuangran/personal-research-agent/pull/1)
+- M1 Python 基础 PR：[GitHub PR #4](https://github.com/yuangran/personal-research-agent/pull/4)
 
 ## 已发现的文档偏差
 
